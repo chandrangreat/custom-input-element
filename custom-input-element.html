@@ -27,7 +27,7 @@
       }
     </style>
     <div class="inputContainer">
-      <paper-input label="Choose a {{label}}" value="{{value}}" on-change="_display"></paper-input>
+      <paper-input label="[[label]]" value="{{value}}" on-change="_display"></paper-input>
     </div>
   </template>
 
@@ -38,7 +38,7 @@
      *
      * @customElement
      * @polymer
-     * @demo demo/index.html
+     * @dem o demo/index.html
      */
     class CustomInputElement extends Polymer.Element {
       static get is() { return 'custom-input-element'; }
