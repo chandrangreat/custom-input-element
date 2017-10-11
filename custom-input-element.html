@@ -27,7 +27,7 @@
       }
     </style>
     <div class="inputContainer">
-      <paper-input label="Choose a {{fieldName.name}}" value="{{fieldName.value}}" on-change="_hell"></paper-input>
+      <paper-input label="Choose a {{label}}" value="{{value}}" on-change="_display"></paper-input>
     </div>
   </template>
 
@@ -44,29 +44,20 @@
       static get is() { return 'custom-input-element'; }
       static get properties() {
         return {
-          prop1: {
+          label: {
             type: String,
-            value: 'custom-input-element',
-            fieldName: 'Por'
+            value: '',
           },
-          fieldName:{
-            type: Object,
-            value: {
-              "name": "Concept",
-              "value": "Concept",
-              "id": "IDConcept"
-            }
-          },
-          valueIn: {
+          value: {
             type: String,
-            value: ''
+            value: '',
+            notify: true
           }
-
         };
       }
 
-      _hell() {
-        console.log(this.fieldName.value);
+      _display() {
+        console.log(this.value);
       }
 
     }
